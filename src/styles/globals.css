@@ -1,0 +1,39 @@
+:root {
+	--red-400: hsl(7, 99%, 70%);
+	--yellow-500: hsl(51, 100%, 49%);
+
+	--blue-800: hsl(198, 62%, 26%);
+
+	--green-800: hsl(167, 40%, 24%);
+	--green-500: hsl(168, 34%, 41%);
+
+	--gray-800: hsl(212, 27%, 19%);
+	--gray-700: hsl(213, 9%, 39%);
+	--gray-600: hsl(232, 10%, 55%);
+	--gray-200: hsl(210, 4%, 67%);
+
+	--white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+  }
