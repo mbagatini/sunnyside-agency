@@ -1,0 +1,35 @@
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1.5rem;
+	margin: auto;
+}
+
+.menu {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	li {
+		font-size: 0.85rem;
+		font-weight: 400;
+		color: var(--white);
+
+	}
+
+	li.contact {
+		font-family: 'Fraunces', serif;
+		font-size: 0.8rem;
+		font-weight: 600;
+		background: #ffffff40;
+		padding: 1rem 1.5rem;
+		border-radius: 2rem;
+	}
+}
