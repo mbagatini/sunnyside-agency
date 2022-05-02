@@ -14,6 +14,11 @@ function Home() {
       <div className={styles.banner}>
         <Image src={imgBannerDesktop} alt="banner" layout="responsive" />
         <h1>WE ARE CREATIVES</h1>
+        <img
+          src="/images/icon-arrow-down.svg"
+          alt="arrow"
+          className={styles.icon}
+        />
       </div>
     </div>
   );
