@@ -1,35 +1,93 @@
+@use "../../styles/breakpoints.scss" as *;
+
 .container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.5rem 1.5rem;
-	margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin: auto;
 }
 
 .menu {
-	list-style: none;
-	display: flex;
-	align-items: center;
-	gap: 2rem;
+  opacity: 0;
+  list-style: none;
 
-	li {
-		font-size: 0.85rem;
-		font-weight: 400;
-		color: var(--white);
+  @include respond-to(sm) {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 
-	}
+    li {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--white);
+    }
 
-	li.contact {
-		font-family: 'Fraunces', serif;
-		font-size: 0.8rem;
-		font-weight: 600;
-		background: #ffffff40;
-		padding: 1rem 1.5rem;
-		border-radius: 2rem;
-	}
+    li.contact {
+      font-family: "Fraunces", serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #ffffff40;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+    }
+  }
+}
+
+.menu-mobile {
+  position: absolute;
+  width: calc(100% - 3rem);
+  top: 5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+  background-color: var(--white);
+
+  li {
+    color: var(--gray-600);
+  }
+
+  li.contact {
+    font-family: "Fraunces", serif;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: var(--gray-800);
+    background: var(--yellow-500);
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+  }
+}
+
+.menu-mobile:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 26px solid transparent;
+  border-bottom-color: var(--white);
+  border-top: 0;
+  border-right: 0;
+  margin-left: -10px;
+  margin-top: -26px;
+}
+
+.show-menu {
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.menu-icon {
+  border: none;
+  background: transparent;
 }
