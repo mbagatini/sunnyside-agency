@@ -11,6 +11,10 @@
   align-items: center;
   padding: 1.5rem;
   margin: auto;
+
+  @include respond-to(sm) {
+    padding: 0 1.5rem;
+  }
 }
 
 .menu {
