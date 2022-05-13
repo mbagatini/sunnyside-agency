@@ -8,14 +8,14 @@ import styles from "./Header.module.scss";
 import { useState } from "react";
 
 export function Header() {
-  const point = useBreakpoint();
+  const { isMobile } = useBreakpoint();
 
   const [menuIsOpen, setMenuIsOpen] = useState(true);
-  const showMenu = (point == "xs" && menuIsOpen) || point != "xs";
+  const showMenu = (isMobile && menuIsOpen) || !isMobile;
 
   let menuClasses = [styles.menu];
   if (showMenu) menuClasses.push(styles["show-menu"]);
-  if (point == "xs") menuClasses.push(styles["menu-mobile"]);
+  if (isMobile) menuClasses.push(styles["menu-mobile"]);
 
   return (
     <div className={styles.container}>
@@ -27,7 +27,7 @@ export function Header() {
         layout="fixed"
       />
 
-      {point == "xs" && (
+      {isMobile && (
         <button
           className={styles["menu-icon"]}
           onClick={() => setMenuIsOpen(!menuIsOpen)}

@@ -30,5 +30,7 @@ export function useBreakpoint() {
     return () => window.removeEventListener("resize", calcInnerWidth);
   }, []);
 
-  return brkPnt;
+  const isMobile = brkPnt === "xs";
+
+  return { point: brkPnt, isMobile };
 }
