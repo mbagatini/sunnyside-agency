@@ -2,7 +2,8 @@ import Image from "next/image";
 import imgMenu from "/public/images/icon-hamburger.svg";
 
 import { useBreakpoint } from "../../hooks/useBreakpoint";
-import { MenuItem } from "./MenuItem";
+import { MenuItem } from "../MenuItem";
+import { MenuLinks } from "../MenuLinks";
 
 import styles from "./Header.module.scss";
 import { useState } from "react";
@@ -21,7 +22,7 @@ export function Header() {
     <div className={styles.container}>
       <Image
         src="/images/logo.svg"
-        alt="logo"
+        alt="Sunnyside"
         width={128}
         height={24}
         layout="fixed"
@@ -37,9 +38,7 @@ export function Header() {
       )}
 
       <menu className={menuClasses.join(" ")}>
-        <MenuItem href="/">About</MenuItem>
-        <MenuItem href="/">Services</MenuItem>
-        <MenuItem href="/">Projects</MenuItem>
+        <MenuLinks />
         <MenuItem href="/" className={styles.contact}>
           CONTACT
         </MenuItem>
