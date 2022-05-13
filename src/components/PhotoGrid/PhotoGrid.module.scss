@@ -1,0 +1,11 @@
+@use "../../styles/breakpoints.scss" as *;
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  }
+}
