@@ -9,11 +9,11 @@ import coneImg from "/public/images/desktop/image-gallery-cone.jpg";
 
 export function PhotoGrid() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <Image src={bottlesImg} alt="Bottles of milk" objectFit="cover" />
       <Image src={orangeImg} alt="Orange in a bowl" objectFit="cover" />
       <Image src={coneImg} alt="Icecream cone" objectFit="cover" />
       <Image src={sugarImg} alt="Sugarcubes" objectFit="cover" />
-    </div>
+    </section>
   );
 }
