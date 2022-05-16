@@ -12,7 +12,7 @@ export function Footer() {
         src="/images/logo.svg"
         alt="Sunnyside"
         width={176}
-        height={32}
+        height={36}
         className={styles.logo}
       />
 
