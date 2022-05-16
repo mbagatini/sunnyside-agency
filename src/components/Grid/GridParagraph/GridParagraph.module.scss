@@ -1,4 +1,4 @@
-@use "../../styles/breakpoints.scss" as *;
+@use "../../../styles/breakpoints.scss" as *;
 
 .container {
   display: flex;
@@ -12,18 +12,19 @@
 
   @include respond-to(sm) {
     text-align: left;
-    max-width: 340px;
+    max-width: 360px;
   }
 
   h1 {
     margin: 0;
+    font-size: xx-large;
     font-weight: 900;
   }
 
   p {
     margin: 0;
     color: var(--gray-600);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     line-height: 1.25rem;
   }
 }

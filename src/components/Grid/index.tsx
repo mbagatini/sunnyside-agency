@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { GridParagraph } from "../GridParagraph";
-import { GridPhotoDescription } from "../GridPhotoDescription";
+import { GridParagraph } from "./GridParagraph";
+import { GridPhotoDescription } from "./GridPhotoDescription";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 import styles from "./Grid.module.scss";
@@ -61,7 +61,7 @@ export function Grid() {
         <h1>Graphic Design</h1>
         <p>
           Great design makes you memorable. We deliver artwork that underscores
-          your brand message and captures potential client&apos;s attention
+          your brand message and captures potential client&apos;s attention.
         </p>
       </GridPhotoDescription>
       <GridPhotoDescription
