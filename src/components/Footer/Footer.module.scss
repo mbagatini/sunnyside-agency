@@ -1,12 +1,12 @@
 .container {
-  background-color: hsla(168, 34%, 41%, 0.5);
+  background-color: var(--green-400);
   padding: 3rem;
   text-align: center;
 }
 
 .logo {
-  filter: brightness(0) saturate(100%) invert(26%) sepia(5%) saturate(3958%)
-    hue-rotate(116deg) brightness(107%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(32%) saturate(768%)
+    hue-rotate(116deg) brightness(93%) contrast(87%);
 }
 
 .nav {
@@ -22,5 +22,10 @@
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--green-500);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--white);
+    }
   }
 }

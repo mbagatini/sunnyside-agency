@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image, { ImageProps } from "next/image";
 
+import styles from "./SocialMediaItem.module.scss";
+
 interface SocialMediaItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string;
   image: {
@@ -16,7 +18,7 @@ export function SocialMediaItem({
 }: SocialMediaItemProps) {
   return (
     <Link href={href} {...rest}>
-      <a>
+      <a className={styles.link}>
         <Image src={image.src} alt={image.alt} />
       </a>
     </Link>
