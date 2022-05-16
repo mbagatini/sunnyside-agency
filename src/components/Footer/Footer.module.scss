@@ -1,0 +1,26 @@
+.container {
+  background-color: hsla(168, 34%, 41%, 0.5);
+  padding: 3rem;
+  text-align: center;
+}
+
+.logo {
+  filter: invert(29%) sepia(26%) saturate(799%) hue-rotate(116deg)
+    brightness(40%) contrast(65%);
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  li {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--green-500);
+  }
+}
