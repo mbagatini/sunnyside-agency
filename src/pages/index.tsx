@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import styles from "../styles/Home.module.scss";
+
+import { useBreakpoint } from "../hooks/useBreakpoint";
 import { Header } from "../components/Header";
 import { Grid } from "../components/Grid";
 import { PhotoGrid } from "../components/PhotoGrid";
@@ -8,12 +11,11 @@ import { Footer } from "../components/Footer";
 import imgBannerMobile from "/public/images/mobile/image-header.jpg";
 import imgBannerDesktop from "/public/images/desktop/image-header.jpg";
 import imgArrow from "/public/images/icon-arrow-down.svg";
-import { useBreakpoint } from "../hooks/useBreakpoint";
 
 function Home() {
-  const point = useBreakpoint();
+  const { isMobile } = useBreakpoint();
 
-  const imgBanner = point == "xs" ? imgBannerMobile : imgBannerDesktop;
+  const imgBanner = isMobile ? imgBannerMobile : imgBannerDesktop;
 
   return (
     <div>
