@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Header } from "../components/Header";
 import { Grid } from "../components/Grid";
+import { PhotoGrid } from "../components/PhotoGrid";
 import { Footer } from "../components/Footer";
 
 import imgBannerMobile from "/public/images/mobile/image-header.jpg";
@@ -28,6 +29,7 @@ function Home() {
       </section>
 
       <Grid />
+      <PhotoGrid />
       <Footer />
     </div>
   );

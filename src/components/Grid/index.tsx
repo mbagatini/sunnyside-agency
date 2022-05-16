@@ -1,15 +1,23 @@
 import Image from "next/image";
 import { GridParagraph } from "../GridParagraph";
+import { GridPhotoDescription } from "../GridPhotoDescription";
+import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 import styles from "./Grid.module.scss";
 
-import eggImg from "/public/images/desktop/image-transform.jpg";
-import glassImg from "/public/images/desktop/image-stand-out.jpg";
-import cherryImg from "/public/images/desktop/image-graphic-design.jpg";
-import tangerineImg from "/public/images/desktop/image-photography.jpg";
-import { GridPhotoDescription } from "../GridPhotoDescription";
+import eggImgDesktop from "/public/images/desktop/image-transform.jpg";
+import glassImgDesktop from "/public/images/desktop/image-stand-out.jpg";
+import cherryImgDesktop from "/public/images/desktop/image-graphic-design.jpg";
+import tangerineImgDesktop from "/public/images/desktop/image-photography.jpg";
+
+import eggImgMobile from "/public/images/mobile/image-transform.jpg";
+import glassImgMobile from "/public/images/mobile/image-stand-out.jpg";
+import cherryImgMobile from "/public/images/mobile/image-graphic-design.jpg";
+import tangerineImgMobile from "/public/images/mobile/image-photography.jpg";
 
 export function Grid() {
+  const { isMobile } = useBreakpoint();
+
   return (
     <section className={styles.container}>
       <GridParagraph linkColor="yellow">
@@ -20,17 +28,22 @@ export function Grid() {
           mostof the marketing for you.
         </p>
       </GridParagraph>
-      <div style={{ position: "relative" }}>
+      <div className={styles.image}>
         <Image
-          src={eggImg}
+          src={isMobile ? eggImgMobile : eggImgDesktop}
           alt="Transformation"
           objectFit="cover"
           layout="fill"
         />
       </div>
 
-      <div style={{ position: "relative" }}>
-        <Image src={glassImg} alt="Stand out" objectFit="cover" layout="fill" />
+      <div className={styles.image}>
+        <Image
+          src={isMobile ? glassImgMobile : glassImgDesktop}
+          alt="Stand out"
+          objectFit="cover"
+          layout="fill"
+        />
       </div>
       <GridParagraph linkColor="pink">
         <h1>Stand out to the right audience</h1>
@@ -41,14 +54,20 @@ export function Grid() {
         </p>
       </GridParagraph>
 
-      <GridPhotoDescription src={cherryImg} alt="Graphic Design">
+      <GridPhotoDescription
+        src={isMobile ? cherryImgMobile : cherryImgDesktop}
+        alt="Graphic Design"
+      >
         <h1>Graphic Design</h1>
         <p>
           Great design makes you memorable. We deliver artwork that underscores
           your brand message and captures potential client&apos;s attention
         </p>
       </GridPhotoDescription>
-      <GridPhotoDescription src={tangerineImg} alt="Photography">
+      <GridPhotoDescription
+        src={isMobile ? tangerineImgMobile : tangerineImgDesktop}
+        alt="Photography"
+      >
         <h1>Photography</h1>
         <p>
           Increase your credibility by getting the most stunning, high-quality

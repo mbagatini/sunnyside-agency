@@ -1,55 +1,62 @@
+@use "../../styles/breakpoints.scss" as *;
+
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: left;
-	justify-content: center;
-	gap: 2rem;
-	max-width: 340px;
-	margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 240px;
+  margin: auto;
+  text-align: center;
 
-	h1 {
-		margin: 0;
-		font-weight: 900;
-	}
+  @include respond-to(sm) {
+    text-align: left;
+    max-width: 340px;
+  }
 
-	p {
-		margin: 0;
-		color: var(--gray-600);
-		font-size: 0.75rem;
-		line-height: 1.25rem;
-	}
+  h1 {
+    margin: 0;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-600);
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
 }
 
 .link {
-	font-family: 'Fraunces', serif;
-	font-weight: 900;
-	font-size: 0.75rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 0.75rem;
 
-	span {
-		position: relative;
-	}
+  span {
+    position: relative;
+  }
 
-	span::after {
-		content: "";
-		position: absolute;
-		bottom: -2px;
-		left: -8px;
-		width: 100%;
-		padding: 0 4px;
-		border: solid 4px;
-		border-radius: 0.5rem;
-	}
-
+  span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -8px;
+    width: 100%;
+    padding: 0 4px;
+    border: solid 4px;
+    border-radius: 0.5rem;
+  }
 }
 
 .yellow {
-	span::after {
-		border-color: hsla(51, 100%, 49%, 0.2);
-	}
+  span::after {
+    border-color: hsla(51, 100%, 49%, 0.2);
+  }
 }
 
 .pink {
-	span::after {
-		border-color: hsl(7, 99%, 70%, 0.2);
-	}
+  span::after {
+    border-color: hsl(7, 99%, 70%, 0.2);
+  }
 }
