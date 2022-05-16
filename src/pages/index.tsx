@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Header } from "../components/Header";
 import { Grid } from "../components/Grid";
-import styles from "../styles/Home.module.scss";
+import { Footer } from "../components/Footer";
 
 import imgBannerMobile from "/public/images/mobile/image-header.jpg";
 import imgBannerDesktop from "/public/images/desktop/image-header.jpg";
@@ -28,6 +28,7 @@ function Home() {
       </section>
 
       <Grid />
+      <Footer />
     </div>
   );
 }
