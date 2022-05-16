@@ -6,6 +6,7 @@ import { useBreakpoint } from "../hooks/useBreakpoint";
 import { Header } from "../components/Header";
 import { Grid } from "../components/Grid";
 import { PhotoGrid } from "../components/PhotoGrid";
+import { Testimonials } from "../components/Testimonials";
 import { Footer } from "../components/Footer";
 
 import imgBannerMobile from "/public/images/mobile/image-header.jpg";
@@ -31,6 +32,7 @@ function Home() {
       </section>
 
       <Grid />
+      <Testimonials />
       <PhotoGrid />
       <Footer />
     </div>
