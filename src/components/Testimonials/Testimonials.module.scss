@@ -1,16 +1,30 @@
+@use "../../styles//breakpoints.scss" as *;
+
 .container {
-  padding: 6.5rem 3rem;
+  padding: 3rem;
   text-align: center;
 
-  h4 {
-    color: var(--gray-200);
-    letter-spacing: 0.2rem;
+  @include respond-to(sm) {
+    padding: 6.5rem 3rem;
   }
+}
+
+.title {
+  color: var(--gray-200);
+  font-weight: 900;
+  letter-spacing: 0.2rem;
 }
 
 .clients {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2rem;
-  padding: 3rem;
+  gap: 4rem;
+  padding: 3rem 0;
+
+  @include respond-to(sm) {
+    flex-direction: row;
+    gap: 2rem;
+    margin: auto;
+  }
 }

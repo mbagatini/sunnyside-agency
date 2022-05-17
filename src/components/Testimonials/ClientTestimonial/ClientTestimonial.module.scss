@@ -1,16 +1,26 @@
+@use "../../../styles//breakpoints.scss" as *;
+
 .container {
-  max-width: 260px;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 
+  @include respond-to(sm) {
+    max-width: 300px;
+  }
+
   p {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     font-size: 0.85rem;
     line-height: 1.25rem;
     color: var(--gray-700);
+
+    @include respond-to(sm) {
+      margin: 3rem 0;
+    }
   }
 
   h5 {
@@ -23,6 +33,7 @@
     color: var(--gray-200);
   }
 }
+
 .profile {
   border-radius: 50%;
 }

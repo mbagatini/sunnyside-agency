@@ -9,7 +9,7 @@ import styles from "./Testimonials.module.scss";
 export function Testimonials() {
   return (
     <section className={styles.container}>
-      <h4>CLIENT TESTIMONIALS</h4>
+      <h5 className={styles.title}>CLIENT TESTIMONIALS</h5>
 
       <div className={styles.clients}>
         <ClientTestimonial
