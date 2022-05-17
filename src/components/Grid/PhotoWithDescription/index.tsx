@@ -1,18 +1,18 @@
 import Image, { StaticImageData } from "next/image";
 
-import styles from "./GridPhotoDescription.module.scss";
+import styles from "./PhotoWithDescription.module.scss";
 
-interface GridPhotoDescriptionProps {
+interface PhotoWithDescriptionProps {
   src: StaticImageData;
   alt: string;
   children: React.ReactNode;
 }
 
-export function GridPhotoDescription({
+export function PhotoWithDescription({
   src,
   alt,
   children,
-}: GridPhotoDescriptionProps) {
+}: PhotoWithDescriptionProps) {
   return (
     <div className={styles.container}>
       <Image src={src} alt={alt} objectFit="cover" layout="fill" />

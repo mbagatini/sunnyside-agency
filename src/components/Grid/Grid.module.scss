@@ -1,16 +1,10 @@
 @use "../../styles/breakpoints.scss" as *;
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 400px;
+.images-container {
+  display: flex;
+  flex-direction: column;
 
   @include respond-to(sm) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 540px;
+    flex-direction: row;
   }
-}
-
-.image {
-  position: relative;
 }

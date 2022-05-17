@@ -2,16 +2,31 @@
 
 .container {
   display: flex;
+  flex-direction: column-reverse;
+
+  @include respond-to(sm) {
+    flex-direction: row;
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.content {
+  display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
   gap: 2rem;
-  max-width: 240px;
+  max-width: 268px;
   margin: auto;
+  padding: 3rem 0;
   text-align: center;
 
   @include respond-to(sm) {
     text-align: left;
+    min-height: 540px;
     max-width: 360px;
   }
 
@@ -59,5 +74,15 @@
 .pink {
   span::after {
     border-color: hsl(7, 99%, 70%, 0.2);
+  }
+}
+
+.image {
+  position: relative;
+  min-height: 318px;
+  width: 100%;
+
+  @include respond-to(sm) {
+    max-width: 50%;
   }
 }
