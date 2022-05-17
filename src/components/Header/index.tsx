@@ -11,7 +11,7 @@ import { useState } from "react";
 export function Header() {
   const { isMobile } = useBreakpoint();
 
-  const [menuIsOpen, setMenuIsOpen] = useState(true);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const showMenu = (isMobile && menuIsOpen) || !isMobile;
 
   let menuClasses = [styles.menu];
