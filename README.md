@@ -8,10 +8,11 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Layout](#layout)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Application ready](#application-ready)
 
 ## Overview
 
@@ -25,11 +26,6 @@ Users should be able to:
 ### Layout
 
 ![desktop-preview](https://user-images.githubusercontent.com/17517028/168897941-85c1dc63-e649-45d4-8dea-1ffb00957896.jpg)
-
-
-### Screenshot
-
-https://user-images.githubusercontent.com/17517028/168899705-27c5e3b3-aa3a-4c9d-93b4-89a78efb9e17.mp4
 
 ## My process
 
@@ -49,3 +45,7 @@ https://user-images.githubusercontent.com/17517028/168899705-27c5e3b3-aa3a-4c9d-
 With this project I had the change to chalange my skills with front-end, I usually work with back-end and this work made me practice the abilities for building interfaces.
 
 It's a eye-opening work to build mobile-first applications, as this one, very nice to work with responsiveness in CSS that stays clean and easy to understand.
+
+### Application ready
+
+https://user-images.githubusercontent.com/17517028/168899705-27c5e3b3-aa3a-4c9d-93b4-89a78efb9e17.mp4
